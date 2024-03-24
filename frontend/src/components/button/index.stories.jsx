@@ -10,7 +10,7 @@ export default {
       control: "radio",
       options: ["solid", "outlined"],
     },
-    color: { control: "color" }, // Color control for custom colors
+    color: { control: "color" }, 
     size: { control: { type: "radio", options: ["small", "medium", "large"] } },
     label: { control: "text" },
     // onClick: { action: "clicked" },
@@ -35,6 +35,6 @@ export const Outlined = Template.bind({});
 Outlined.args = {
   type:"submit",
   variant: "outlined",
-  color: "#00ff00", // Custom color for outlined button
+  color: "#00ff00", 
   label: "Outlined Button",
 };
