@@ -37,7 +37,7 @@ To run this project, you will need to add the following environment variables to
 Clone the project
 
 ```bash
-  git clone https://link-to-project](https://github.com/BuddhikaDilupul/zmessenger-employee-crud
+  git clone https://github.com/BuddhikaDilupul/zmessenger-employee-crud
 ```
 
 Go to the project directory
