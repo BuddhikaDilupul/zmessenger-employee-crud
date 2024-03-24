@@ -81,3 +81,11 @@ Start the server
 ```bash
   npm run dev
 ```
+
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+`PORT`
+
+`MONGO_URL`
