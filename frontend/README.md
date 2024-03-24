@@ -11,7 +11,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Run Locally
 
 ```bash
-  cd my-project
+  cd frontend
 ```
 
 Install dependencies
