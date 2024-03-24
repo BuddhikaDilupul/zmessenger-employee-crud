@@ -53,7 +53,6 @@ CustomStyles.args = {
   underline: true,
   align: "center",
   style: {
-    color: "#333", // Example color, you can adjust as needed
-    // Add any additional inline styles as needed
+    color: "#333", 
   },
 };
