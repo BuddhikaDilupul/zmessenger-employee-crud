@@ -18,6 +18,7 @@ exports.create = async (req, res, next) => {
         lastName: req.body.lastName,
         contactNumber: req.body.contactNumber,
         gender: req.body.gender,
+        salary: req.body.salary,
       });
       await user.save();
 

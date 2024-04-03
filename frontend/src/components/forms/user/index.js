@@ -19,6 +19,7 @@ const UserProfileForm = ({ onSubmit, isLoading, data }) => {
     email: data?.email || "",
     contactNumber: data?.contactNumber || "",
     gender: data?.gender,
+    salary: data?.salary || "",
   };
   const handleSubmit = (values) => {
     if (
@@ -26,7 +27,8 @@ const UserProfileForm = ({ onSubmit, isLoading, data }) => {
       data?.lastName === values.lastName &&
       data?.email === values.email &&
       data?.contactNumber === values.contactNumber &&
-      data?.gender === values.gender
+      data?.gender === values.gender &&
+      data?.salary === values.salary
     ) {
       return;
     } else {
@@ -145,6 +147,24 @@ const UserProfileForm = ({ onSubmit, isLoading, data }) => {
               name="contactNumber"
               type="text"
               placeholder="Contact Number"
+              isDisabled={isDisabled}
+            />
+            {/* salary */}
+            <Text
+              size="sm"
+              weight="bold"
+              emphasis="low"
+              italic={false}
+              underline={false}
+              align="center"
+              style={{ color: "#333", padding: "4px" }}
+            >
+              Salary
+            </Text>
+            <CustomInput
+              name="salary"
+              type="text"
+              placeholder="Salary"
               isDisabled={isDisabled}
             />
             <Text

@@ -9,7 +9,8 @@ module.exports = {
       lastName: Joi.string().required().regex(/^[a-zA-Z]+$/).min(6).max(10),
       contactNumber: Joi.string().required().pattern( /^0\d{9}$/),
       status: Joi.forbidden(),
-      gender: Joi.string().required().valid('male', 'female')
+      gender: Joi.string().required().valid('male', 'female'),
+      salary: Joi.string().required()
     }),
   },
 };

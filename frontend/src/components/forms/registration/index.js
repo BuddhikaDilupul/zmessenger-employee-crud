@@ -21,6 +21,7 @@ const RegistrationForm = ({ onSubmit, data, error, isLoading }) => {
     lastName: "",
     contactNumber: "",
     gender: "",
+    salary: "",
   };
 
   return (
@@ -141,6 +142,24 @@ const RegistrationForm = ({ onSubmit, data, error, isLoading }) => {
               name="gender"
               options={options}
               label={"select gender"}
+            />
+            <Text
+              size="lg"
+              weight="bold"
+              emphasis="low"
+              italic={false}
+              underline={false}
+              align="center"
+              style={{ color: "#333", padding: "4px" }}
+            >
+              Add Salary
+            </Text>
+            <CustomInput
+              name="salary"
+              type="text"
+              id="salary"
+              placeholder="Salary"
+              initialValues={initialValues.salary}
             />
             <CustomButton
               type="submit"

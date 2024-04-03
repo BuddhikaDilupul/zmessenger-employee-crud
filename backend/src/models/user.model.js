@@ -27,6 +27,10 @@ const userShema = new Schema(
       type: String,
       required: true,
     },
+    salary: {
+      type: String,
+      required: true,
+    },
   },
   { timestamps: true }
 );

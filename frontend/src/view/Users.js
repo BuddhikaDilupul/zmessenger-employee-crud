@@ -28,6 +28,14 @@ const Users = () => {
     deleteData(`api/employee/${id}`);
     setReload(!reload);
   };
+  // const [totalSalary, setTotalSalary] = useState(0);
+  var totalSalary = 0;
+  if (data_GET !== null) {
+    data_GET?.users.forEach((element) => {
+      console.log(element.salary);
+      totalSalary += parseInt(element.salary);
+    });
+  }
   useEffect(() => {
     getData("/api/employee");
   }, [reload, isLoading_DELETE]);
@@ -45,6 +53,7 @@ const Users = () => {
             <th>Email</th>
             <th>Contact No.</th>
             <th>Gender</th>
+            <th>Salary</th>
             <th colSpan={2}>Actions</th>
           </tr>
         </thead>
@@ -59,6 +68,7 @@ const Users = () => {
                   <td>{data.email}</td>
                   <td>{data.contactNumber}</td>
                   <td>{data.gender}</td>
+                  <td>{data.salary}</td>
                   <td>
                     <CustomButton
                       color={colors.primary.harmonyBlue}
@@ -92,6 +102,10 @@ const Users = () => {
               <td colSpan={7}>No Data to Show</td>
             </tr>
           )}
+          <tr>
+            <td colSpan={6}>Total salary</td>
+            <td colSpan={3}>{totalSalary}</td>
+          </tr>
         </tbody>
       </Table>
     </div>

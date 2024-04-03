@@ -24,4 +24,7 @@ export const UserValidationSchema = Yup.object({
   gender: Yup.string()
     .required("Gender is required")
     .oneOf(["male", "female"], "Invalid gender"),
+  salary: Yup.string()
+    .required("Salary is required")
+    .matches(/^[0-9]+$/, "Should only contain numbers"),
 });
